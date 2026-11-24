@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0b">
+<title>KUMANDER HOPE AI DRAMA</title>
+<style>
+:root{--gold:#d6ad55;--gold2:#f2d58a;--bg:#0b0b0b;--panel:#171717;--muted:#aaa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f7f3e9;font-family:Arial,Inter,sans-serif}
+header{padding:22px 18px;border-bottom:1px solid #49391c;background:linear-gradient(120deg,#111,#1c160a)}
+.brand{color:var(--gold2);font-weight:800;letter-spacing:1.5px;font-size:20px}.tag{color:#c9c1af;font-size:12px;margin-top:5px}
+main{max-width:1000px;margin:auto;padding:20px 16px 60px}
+.hero{padding:26px 20px;border:1px solid #5c4824;border-radius:18px;background:radial-gradient(circle at top right,#3a2b12,#17130c 55%,#111);margin-bottom:20px}
+h1{font-size:clamp(27px,6vw,42px);line-height:1.1;margin:0 0 10px;color:var(--gold2)}
+p{line-height:1.55;color:#d2cbbb}.gold{color:var(--gold2)}
+.search{width:100%;padding:14px;border-radius:10px;border:1px solid #5c4824;background:#111;color:white;font-size:16px;margin:12px 0}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 18px}
+button{cursor:pointer;border:1px solid #6b5429;background:#211b10;color:var(--gold2);padding:10px 14px;border-radius:9px;font-weight:700}
+button.active,button:hover{background:var(--gold);color:#17120a}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:var(--panel);border:1px solid #383027;border-radius:14px;padding:17px}
+.card h3{color:var(--gold2);margin:0 0 7px}.small{font-size:13px;color:var(--muted)}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.primary{background:var(--gold);color:#17120a;border-color:var(--gold)}
+.hidden{display:none!important}
+.panel{background:#151515;border:1px solid #49391c;border-radius:15px;padding:18px;margin-top:18px}
+.episode{border-top:1px solid #393027;padding:14px 0}.episode:first-child{border-top:0}
+.prompt{white-space:pre-wrap;background:#090909;border:1px solid #383027;padding:14px;border-radius:10px;color:#e9e2d2;font-size:14px;line-height:1.5}
+footer{text-align:center;padding:28px;color:#8d8577;font-size:12px}
+.badge{display:inline-block;border:1px solid #6b5429;color:var(--gold2);padding:5px 9px;border-radius:30px;font-size:11px}
+</style>
+</head>
+<body>
+<header><div class="brand">✦ KUMANDER HOPE</div><div class="tag">AI DRAMA PROMPT LIBRARY · CREATE STORIES THAT CONNECT</div></header>
+<main>
+<section class="hero">
+<span class="badge">YOUR STORY. YOUR CREATION.</span>
+<h1>AI Drama Prompt App</h1>
+<p>Hanapin, basahin, at kopyahin ang mga prompt para sa iyong short AI drama videos. Nakaayos ang bawat kuwento ayon sa episode para tuloy-tuloy ang story.</p>
+<div class="actions"><button class="primary" onclick="showLibrary()">Explore Stories</button><button onclick="showPage('premium')">Premium Membership</button></div>
+</section>
+<section id="library">
+<h2 class="gold">Drama Prompt Library</h2>
+<input class="search" id="search" placeholder="Search story title..." oninput="renderStories()">
+<div class="tabs" id="tabs"></div>
+<div class="grid" id="stories"></div>
+</section>
+<section id="storyPage" class="panel hidden"></section>
+<section id="premium" class="panel hidden">
+<button onclick="showLibrary()">← Back to Library</button>
+<h2 class="gold">Premium Membership</h2>
+<p>Prototype preview lamang. Wala pang aktuwal na payment collection o premium account activation.</p>
+<div class="grid">
+<div class="card"><h3>Free</h3><h2>₱0</h2><p>Access sa libreng sample stories at prompts.</p></div>
+<div class="card"><h3>Premium Monthly</h3><h2>₱99</h2><p>Sample price lamang. Hindi pa aktibo ang subscription.</p></div>
+<div class="card"><h3>Premium Yearly</h3><h2>₱999</h2><p>Sample price lamang. Hindi pa aktibo ang subscription.</p></div>
+</div>
+<p class="small">Bago tumanggap ng bayad, kailangan munang ikonekta ang aprubadong secure payment provider at beripikahin ang payment bago magbigay ng premium access.</p>
+</section>
+</main>
+<footer>© 2026 KUMANDER HOPE · AI DRAMA PROMPT LIBRARY</footer>
+<script>
+const stories=[
+{ id:1,title:"Ang Lihim sa Likod ng Pag-ibig",category:"Romance",desc:"Isang hindi inaasahang pagkikita na mauuwi sa masalimuot na katotohanan.",characters:"DANIEL REYES — 28, CEO; SOFIA SANTOS — 24, independent young woman; ISABELLA — 26, dating kasintahan.",episodes:[
+["Episode 1 — Ang Muling Pagkikita","Vertical 9:16, 10-second ultra-realistic Filipino teleserye scene. Outside a modern corporate building, Daniel notices Sofia dropping her papers and helps her pick them up. Daniel: “Sofia? Ikaw ba ’yan?” Sofia looks surprised: “Daniel… ang tagal na.” Natural Tagalog dialogue, accurate lip sync, cinematic camera movement, warm afternoon light, emotional romantic background music. Keep character faces and outfits consistent."],
+["Episode 2 — Ang Hindi Nasabing Salita","Vertical 9:16, 10-second cinematic continuation directly after Episode 1. Sofia takes a small step back while Daniel tries to explain. Daniel: “Marami akong gustong sabihin sa’yo.” Sofia: “Huli na ang lahat, Daniel.” Close-up on their emotional expressions, natural Tagalog lip sync, realistic movement, same outfits and location, soft dramatic music."],
+["Episode 3 — May Nakakita","Vertical 9:16, 10-second continuation. From across the lobby, Isabella sees Daniel and Sofia talking. Isabella quietly says: “Hindi pa pala siya nakakalimot.” She turns away with a determined expression. Cinematic tracking shot, realistic acting, natural Tagalog dialogue, same character appearance, suspenseful drama music."]
+]},
+{ id:2,title:"Tawanan sa Tambayan",category:"Comedy",desc:"Magkakaibigang laging may asaran pero solid ang samahan.",characters:"JAIRO — palabirong binata; HARARA — matapang sumagot; TRACEY — mahilig tumawa.",episodes:[
+["Episode 1 — Asaran Na Naman","Vertical 9:16, 10-second realistic Filipino comedy scene in a neighborhood hangout. Jairo teases Harara: “Bakit parang galit ka na naman?” Harara replies: “Ikaw kasi, mukha kang problema!” Tracey laughs: “Jairo, talo ka!” Natural Tagalog lip sync, lively camera movement, playful background music."],
+["Episode 2 — Bawi si Jairo","Vertical 9:16, 10-second direct continuation at the same hangout. Jairo pretends to be offended: “Grabe kayo sa akin!” Harara smirks: “Aminin mo na, talo ka.” Tracey laughs and points at him. Realistic gestures, consistent outfits and faces, upbeat comedic music."]
+]},
+{ id:3,title:"Pamilya at Pagtataksil",category:"Family Drama",desc:"Isang pamilya ang susubok sa katotohanan at tiwala.",characters:"MAYA — panganay na anak; LUCIA — ina; ANDRE — kapatid.",episodes:[
+["Episode 1 — Ang Nawawalang Sulat","Vertical 9:16, 10-second Filipino family drama inside a modest living room. Maya finds an old envelope on the table and asks her mother: “Mama, bakit nakatago ito?” Lucia freezes and replies: “Hindi mo pa dapat malaman.” Natural Tagalog dialogue and lip sync, realistic acting, slow cinematic push-in, emotional music."],
+["Episode 2 — Sagot ng Ina","Vertical 9:16, 10-second direct continuation. Maya holds the envelope while Lucia sits down, visibly worried. Maya asks: “Tungkol ba ito kay Papa?” Lucia whispers: “Oo, anak.” Close-up reaction shots, same room and characters, cinematic family drama tone."]
+]}
+];
+let category="All";
+const categories=["All","Romance","Comedy","Family Drama","Revenge"];
+function showLibrary(){document.getElementById('library').classList.remove('hidden');document.getElementById('storyPage').classList.add('hidden');document.getElementById('premium').classList.add('hidden');window.scrollTo(0,0)}
+function showPage(id){document.getElementById('library').classList.add('hidden');document.getElementById('storyPage').classList.add('hidden');document.getElementById('premium').classList.add('hidden');document.getElementById(id).classList.remove('hidden');window.scrollTo(0,0)}
+function renderTabs(){document.getElementById('tabs').innerHTML=categories.map(c=>`<button class="${category===c?'active':''}" onclick="setCategory('${c}')">${c}</button>`).join('')}
+function setCategory(c){category=c;renderTabs();renderStories()}
+function renderStories(){let q=document.getElementById('search').value.toLowerCase();let items=stories.filter(s=>(category==='All'||s.category===category)&&(s.title.toLowerCase().includes(q)||s.desc.toLowerCase().includes(q)));document.getElementById('stories').innerHTML=items.map(s=>`<article class="card"><span class="badge">${s.category}</span><h3>${s.title}</h3><p>${s.desc}</p><div class="small">${s.episodes.length} episodes · Character references included</div><div class="actions"><button class="primary" onclick="openStory(${s.id})">View Full Story</button></div></article>`).join('')||'<p>Walang nahanap na story.</p>'}
+function openStory(id){let s=stories.find(x=>x.id===id);showPage('storyPage');let p=document.getElementById('storyPage');p.innerHTML=`<button onclick="showLibrary()">← Back to Stories</button><h2 class="gold">${s.title}</h2><span class="badge">${s.category}</span><p>${s.desc}</p><h3 class="gold">Character References</h3><p>${s.characters}</p><h3 class="gold">Episodes & Video Prompts</h3>${s.episodes.map((e,i)=>`<div class="episode"><h3>${e[0]}</h3><div class="prompt" id="prompt-${s.id}-${i}">${e[1]}</div><div class="actions"><button class="primary" onclick="copyPrompt(${s.id},${i})">Copy Prompt</button>${i<s.episodes.length-1?`<button onclick="document.getElementById('prompt-${s.id}-${i+1}').scrollIntoView({behavior:'smooth'})">Next Episode ↓</button>`:''}</div></div>`).join('')}`}
+function copyPrompt(id,i){let s=stories.find(x=>x.id===id);let t=s.episodes[i][1];if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(()=>alert('Prompt copied!')).catch(()=>fallbackCopy(t))}else fallbackCopy(t)}
+function fallbackCopy(t){let a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();alert('Prompt copied!')}
+renderTabs();renderStories();
+</script>
+</body></html>
